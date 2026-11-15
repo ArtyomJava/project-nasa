@@ -1,0 +1,688 @@
+// FILE: data.js
+// Complete Moon & Mars Archive Data (Strictly separated by world: "moon" vs "mars")
+
+const moonArtifacts = [
+  {
+    id: "surveyor3-moon",
+    world: "moon",
+    name: "Surveyor 3 Lander",
+    mission: "Surveyor 3 / Apollo 12",
+    year: 1967,
+    type: "Robotic lander",
+    category: "Robotic Probes",
+    locationName: "Oceanus Procellarum (Mare Cognitum)",
+    coordinates: "3.015° S, 23.418° W",
+    lat: -3.015,
+    lng: -23.418,
+    massKg: 296,
+    image: "img/surveyor3.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS12-48-7136.jpg",
+    imageCredit: "NASA / Apollo 12 Archive",
+    heritageStatus: "10 kg of parts retrieved by Apollo 12",
+    shortDesc: "Located in southeastern Oceanus Procellarum. In November 1969, Apollo 12 astronauts walked to the probe and removed 10 kg of components for return to Earth.",
+    story: "The main frame of the Surveyor 3 spacecraft remains on the Moon in the southeastern part of Oceanus Procellarum (Mare Cognitum) at 3.015° S, 23.418° W. However, the spacecraft is no longer complete. In November 1969, the Apollo 12 Lunar Module landed just 180 meters away. Astronauts Charles Conrad and Alan Bean walked to Surveyor 3 and dismantled approximately 10 kilograms of parts—including its TV camera—to study the effects of long-term exposure to the lunar environment.",
+    conditionToday: "The lander frame stands on the interior slope of Surveyor Crater with clean cable cuts made by the Apollo 12 crew's retrieval shears.",
+    inventoryList: [
+      "Surveyor 3 main spaceframe in Mare Cognitum (-3.015° N, -23.418° E)",
+      "~10 kg of components dismantled by Charles Conrad and Alan Bean (returned to Earth)",
+      "Cutter, for Surveyor Lunar Probe sample [1] (left behind by the Apollo 12 crew)"
+    ],
+    degradation: {
+      day1: "Operational robotic lander on the slope of a crater in Oceanus Procellarum (April 1967).",
+      now: "Partially dismantled chassis standing 180 meters from the Apollo 12 descent stage.",
+      future100: "A primary site of space archaeology marking the only human visit to an unmanned probe on another world."
+    },
+    materials: { aluminum: 165, titanium: 30, electronics: 40 },
+    source: "NASA Science — Surveyor 3 & Catalogue of Manmade Material on the Moon",
+    url: "https://science.nasa.gov/mission/surveyor-3/"
+  },
+  {
+    id: "lunar-orbiter-4",
+    world: "moon",
+    name: "Lunar Orbiter 4 Spacecraft",
+    mission: "Lunar Orbiter 4",
+    year: 1967,
+    type: "Orbital mapper",
+    category: "Robotic Probes",
+    locationName: "22°–30° W Sector (Refined: 34.262° S, 46.193° W)",
+    coordinates: "34.262° S, 46.193° W",
+    lat: -34.262,
+    lng: -46.193,
+    massKg: 386,
+    image: "img/lunar-orbiter4.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Lunar_Orbiter_spacecraft.jpg",
+    imageCredit: "NASA / Lunar Orbiter Project",
+    heritageStatus: "Impacted Lunar Surface (Oct 6, 1967)",
+    shortDesc: "After completing its high-altitude photographic survey, the spacecraft's orbit decayed due to lunar gravity, crashing onto the Moon around October 6, 1967.",
+    story: "Lunar Orbiter 4 rests on the lunar surface. Following the completion of its photographic mapping mission, the spacecraft's orbit naturally decayed due to the Moon's gravitational anomalies, and on approximately October 6, 1967, it impacted the lunar surface. Estimated impact coordinates lie between 22°–30° W longitude (with refined scientific estimates near 34.262° S, 46.193° W).",
+    conditionToday: "Destroyed upon high-velocity impact with the lunar regolith on October 6, 1967 (listed as 'Crashed' in the official catalogue).",
+    inventoryList: [
+      "Fragmented structure and dual-lens camera system of Lunar Orbiter 4",
+      "Impact zone: 22°–30° W longitude (refined coordinates: 34.262° S, 46.193° W)"
+    ],
+    degradation: {
+      day1: "High-velocity orbital impact on October 6, 1967 following orbital decay.",
+      now: "Metallic and optical debris scattered across the southwestern lunar sector.",
+      future100: "Aluminum and titanium fragments remain uncorroded in the lunar vacuum."
+    },
+    materials: { aluminum: 210, titanium: 55, electronics: 65 },
+    source: "NASA — Lunar Orbiter 4 & Catalogue of Manmade Material on the Moon",
+    url: "https://www.nasa.gov/mission/lunar-orbiter-4/"
+  },
+  {
+    id: "surveyor7-tycho",
+    world: "moon",
+    name: "Surveyor 7 Lander",
+    mission: "Surveyor 7",
+    year: 1968,
+    type: "Highland lander",
+    category: "Robotic Probes",
+    locationName: "Tycho Crater Rim (Southern Highlands)",
+    coordinates: "40.86° S, 11.47° W (-40.980° N, -11.509° E)",
+    lat: -40.86,
+    lng: -11.47,
+    massKg: 306,
+    image: "img/surveyor7.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Surveyor_NASA_lunar_lander.jpg",
+    imageCredit: "NASA / JPL",
+    heritageStatus: "Mission ended Feb 21, 1968 (Lunar night -150 °C)",
+    shortDesc: "Sent to the rugged southern highlands near Tycho Crater: transmitted over 21,000 photos, unstuck its own instrument with its scoop, and froze during the lunar night.",
+    story: "Because earlier missions had already confirmed safe landing sites in flat lunar maria for the Apollo program, Surveyor 7 was sent for pure scientific exploration to the rugged southern highlands on the rim of Tycho Crater (40.86° S, 11.47° W). Carrying the most extensive scientific payload of the series, it transmitted over 21,000 high-resolution images (including panoramas of Tycho's rim, Earth, stars, and the solar corona), used an alpha-scattering instrument to find that highland crust contains less iron than the maria, dug trenches and freed its own jammed alpha-analyzer using a mechanical surface sampler scoop, detected magnetic minerals with footpad magnets, served as a target for Earth-based lasers, and recorded lunar horizon glow caused by levitating dust. Active operations ceased on February 21, 1968 after equipment froze and non-rechargeable batteries drained during the -150 °C lunar night.",
+    conditionToday: "Rests on the rocky ejecta blanket of Tycho Crater with frozen electronics and depleted batteries since February 21, 1968.",
+    inventoryList: [
+      "High-resolution television camera (>21,000 images on Day 1; 45 images on Day 2)",
+      "Alpha-scattering surface analyzer for chemical composition analysis",
+      "Mechanical soil mechanics surface sampler scoop on an extendable arm",
+      "Permanent magnets mounted on landing footpads and scoop",
+      "Touchdown dynamics sensors, radar reflectivity sensors, and thermal gauges"
+    ],
+    degradation: {
+      day1: "Active scientific station imaging Tycho Crater and detecting laser beams from Earth.",
+      now: "Permanently dormant since February 21, 1968 following exposure to temperatures below -150 °C.",
+      future100: "Preserved intact in the rugged southern highlands near Tycho Crater."
+    },
+    materials: { aluminum: 175, titanium: 35, electronics: 48 },
+    source: "NASA History Program Office — Catalogue of Manmade Material on the Moon",
+    url: "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunartimeline.html"
+  },
+  {
+    id: "apollo11-descent",
+    world: "moon",
+    name: "Apollo 11 Lunar Module Eagle & Reflector",
+    mission: "Apollo 11",
+    year: 1969,
+    type: "Crewed landing base",
+    category: "Lunar Module Bases",
+    locationName: "Mare Tranquillitatis (0.67408° N, 23.47297° E)",
+    coordinates: "0.67408° N, 23.47297° E",
+    lat: 0.67408,
+    lng: 23.47297,
+    massKg: 2130,
+    image: "img/apollo11.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS11-40-5927.jpg",
+    imageCredit: "NASA / Apollo 11",
+    heritageStatus: "Active Laser Retroreflector",
+    shortDesc: "Site of the first crewed lunar landing. The Lunar Laser Ranging Retroreflector deployed here remains operational today, proving the Moon recedes by 3.8 cm per year.",
+    story: "At the Apollo 11 landing site in Mare Tranquillitatis (descent stage at 0.67408° N, 23.47297° E), astronauts deployed the Lunar Retro-Ranging Reflector Experiment (0.67337° N, 23.47293° E), which remains functional more than half a century later. Earth observatories fire laser pulses at its corner prisms to measure the Earth-Moon distance within centimeters, revealing that the Moon is moving away from Earth at about 3.8 cm per year. Before liftoff, the crew jettisoned life support backpacks, lunar overshoes, cameras, and commemorative tributes to save weight for lunar rock samples.",
+    conditionToday: "The Eagle descent stage stands in the Sea of Tranquility while its quartz corner-cube retroreflector continues returning laser pulses to Earth.",
+    inventoryList: [
+      "LM Descent Stage (plaque attached) — 0.67408° N, 23.47297° E",
+      "Lunar Retro-Ranging Reflector Experiment [1] — 0.67337° N, 23.47293° E",
+      "Passive Seismic Experiment [1] & Central Station",
+      "Gold Olive Branch [1], Apollo 1 Patch [1], Cosmonaut Medals (Gagarin, Komarov) [2], Moon Memorial Disc [1]",
+      "Portable Life Support System (PLSS) [2], Lunar Overshoes [2], Defecation Collection Device [4], Emesis Bag [4]",
+      "Lunar TV Camera [1], wide-angle & day lenses, 100 ft TV cable, S-Band Antenna [1]",
+      "Hammer [1], Large Lunar Sample Scoop [1], Extension Handle [1], Tongs [1], Gnomon [1]"
+    ],
+    degradation: {
+      day1: "First crewed lunar base and deployed scientific package in Mare Tranquillitatis.",
+      now: "The passive laser retroreflector continues operating after more than five decades.",
+      future100: "Humanity's most historic off-world landing site."
+    },
+    materials: { aluminum: 1200, titanium: 380, electronics: 95 },
+    source: "NASA NSSDC — Apollo Program & Catalogue of Manmade Material on the Moon (pp. 2–3)",
+    url: "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo.html"
+  },
+  {
+    id: "apollo12-intrepid",
+    world: "moon",
+    name: "Apollo 12 Lunar Module Intrepid",
+    mission: "Apollo 12",
+    year: 1969,
+    type: "Crewed landing base",
+    category: "Lunar Module Bases",
+    locationName: "Oceanus Procellarum (180 m from Surveyor 3)",
+    coordinates: "3.01239° S, 23.42157° W",
+    lat: -3.01239,
+    lng: -23.42157,
+    massKg: 2211,
+    image: "img/apollo12.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS12-47-6897.jpg",
+    imageCredit: "NASA / Apollo 12",
+    heritageStatus: "Pinpoint Landing 180 m from Surveyor 3",
+    shortDesc: "Landed November 19, 1969 with pinpoint accuracy just 180 meters from Surveyor 3. Built around a cruciform aluminum alloy frame housing an STL descent engine.",
+    story: "A primary objective of Apollo 12 was achieving a pinpoint landing near Surveyor 3 in Oceanus Procellarum, southwest of Copernicus Crater. On November 19, 1969, the Lunar Module Intrepid touched down just 180 meters from Surveyor 3 (-3.01239° N, -23.42157° E). Its descent stage features a cruciform aluminum alloy frame carrying an STL liquid-propellant descent engine in the center bay, surrounded by four bays containing fuel, oxidizer, water, and helium tanks, navigation electronics, landing radar, and batteries. Stage separation during liftoff was executed via pyrotechnic devices, and the spent ascent stage impacted the Moon on November 20, 1969 at 22:17:17.7 UT (3.94° S, 21.20° W).",
+    conditionToday: "The descent stage stands 180 m from Surveyor 3, with the ALSEP Central Station at -3.00942° N, -23.42458° E and the crashed ascent stage at -3.94° N, -21.20° E.",
+    inventoryList: [
+      "LM Descent Stage (plaque attached) [1] — -3.01239° N, -23.42157° E",
+      "LM Ascent Stage Intrepid (impacted Nov 20, 1969 at 22:17:17.7 UT) — -3.94° N, -21.20° E",
+      "Central Station (-3.00942° N, -23.42458° E), Passive Seismic, Magnetometer, Solar Wind Spectrometer, SIDE/CCGE & RTG",
+      "Cutter, for Surveyor Lunar Probe sample [1]",
+      "Electric Hasselblad Camera [2], 60mm Lens [2], Close-up Stereo Camera [1], LM Color TV Camera [1] & Tripod",
+      "Hammock Assembly [1], Utility Towels Red [2] & Blue [2], Earplugs [2], Astronaut Wings (C.C. Williams [1], Alan Bean [1])"
+    ],
+    degradation: {
+      day1: "Touchdown on November 19, 1969 on the rim of Surveyor Crater and pyrotechnic liftoff separation.",
+      now: "Cruciform aluminum alloy descent stage and ALSEP instruments remain in Oceanus Procellarum.",
+      future100: "Joint archaeological complex alongside Surveyor 3."
+    },
+    materials: { aluminum: 1250, titanium: 410, electronics: 110 },
+    source: "NASA NSSDC (1969-099C) & Catalogue of Manmade Material on the Moon (pp. 4–5)",
+    url: "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
+  },
+  {
+    id: "saturn-sivb",
+    world: "moon",
+    name: "Five Saturn V Third Stages (S-IVB)",
+    mission: "Apollo 13, 14, 15, 16, 17",
+    year: 1970,
+    type: "Rocket stages",
+    category: "Rovers & Rocket Stages",
+    locationName: "Seismic Impact Sites (Apollo 13 S-IVB Marker)",
+    coordinates: "2.553° S, 27.887° E (Apollo 13 S-IVB)",
+    lat: -2.553,
+    lng: 27.887,
+    massKg: 69500,
+    image: "img/saturn-sivb.jfif",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Apollo_7_S-IVB.jpg",
+    imageCredit: "NASA / Apollo Archive",
+    heritageStatus: "Heaviest Artificial Objects on the Moon",
+    shortDesc: "Five S-IVB third stages from the Saturn V launch vehicle, intentionally crashed into the Moon for seismic experiments. Among the heaviest objects on the lunar surface.",
+    story: "Alongside the six Apollo Lunar Module descent stages, five S-IVB third stages of the Saturn V launch vehicle were intentionally directed into the lunar surface to generate artificial moonquakes for seismic profiling experiments. These massive rocket stages are among the heaviest manmade objects on the Moon, containing tens of tons of aerospace-grade aluminum and titanium alloys.",
+    conditionToday: "Fragmented across five impact craters following high-velocity seismic collisions with the lunar crust.",
+    inventoryList: [
+      "S-IVB Apollo 13: -2.553° N, 27.887° E",
+      "S-IVB Apollo 14: -8.179° N, 26.031° E",
+      "S-IVB Apollo 15: -1.288° N, -11.824° E",
+      "S-IVB Apollo 16 (lunar impact) & S-IVB Apollo 17: -4.167° N, -12.33° E",
+      "Rocketdyne J-2 engines, liquid hydrogen/oxygen tank structures, and Instrument Units"
+    ],
+    degradation: {
+      day1: "Intentional high-velocity impacts recorded by Apollo passive seismometers.",
+      now: "Largest concentrations of high-grade aerospace aluminum and titanium on the Moon.",
+      future100: "Primary candidate feedstock for future lunar In-Situ Resource Utilization (ISRU) metal recycling."
+    },
+    materials: { aluminum: 48000, titanium: 8200, electronics: 1750 },
+    source: "NASA History Program Office — Catalogue of Manmade Material on the Moon",
+    url: "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo.html"
+  },
+  {
+    id: "apollo14-antares",
+    world: "moon",
+    name: "Apollo 14 Lunar Module Antares & MET",
+    mission: "Apollo 14",
+    year: 1971,
+    type: "Crewed landing base",
+    category: "Lunar Module Bases",
+    locationName: "Fra Mauro Highlands (-3.64530° N, -17.47136° E)",
+    coordinates: "3.64530° S, 17.47136° W",
+    lat: -3.6453,
+    lng: -17.47136,
+    massKg: 2150,
+    image: "img/apollo14.jfif",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS14-66-9230.jpg",
+    imageCredit: "NASA / Apollo 14",
+    heritageStatus: "Active Laser Reflector & 2 Golf Balls",
+    shortDesc: "Apollo 14 Fra Mauro base: houses a functioning laser ranging retroreflector, the two-wheeled Modular Equipment Transporter (MET), two golf balls, and a javelin.",
+    story: "During the Apollo 14 mission in the Fra Mauro highlands (descent stage at -3.64530° N, -17.47136° E), astronauts deployed the second operational Laser Ranging Retroreflector (-3.64421° N, -17.47880° E), which continues returning laser signals today. The official catalogue also records the two-wheeled Modular Equipment Transporter (MET), ALSEP scientific stations, two golf balls driven by Alan Shepard, and a javelin.",
+    conditionToday: "The Antares descent stage, two-wheeled MET cart, and active laser reflector remain in the Fra Mauro region.",
+    inventoryList: [
+      "LM Descent Stage (plaque attached) [1] — -3.64530° N, -17.47136° E",
+      "Laser Range Reflector (active) [1] — -3.64421° N, -17.47880° E",
+      "Central Station (-3.64398° N, -17.47748° E) & LM Ascent Stage (-3.42° N, -19.67° E)",
+      "Modular Equipment Transporter (MET) [1] — two-wheeled handcart",
+      "Golf balls (2) & Javelin [1]",
+      "Electric Hasselblad Camera [1], 16mm Camera [1], Hammock Assembly [2], PLSS [2], Lunar Boots [2]"
+    ],
+    degradation: {
+      day1: "Deployed Fra Mauro scientific station and laser retroreflector in February 1971.",
+      now: "The laser retroreflector remains operational more than five decades after deployment.",
+      future100: "Protected historical site of the Apollo 14 expedition."
+    },
+    materials: { aluminum: 1220, titanium: 390, electronics: 105 },
+    source: "NASA History Program Office — Catalogue of Manmade Material on the Moon (pp. 6–8)",
+    url: "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo.html"
+  },
+  {
+    id: "lrv-apollo15",
+    world: "moon",
+    name: "Apollo 15 Lunar Roving Vehicle (LRV-1)",
+    mission: "Apollo 15",
+    year: 1971,
+    type: "Crewed lunar rover",
+    category: "Rovers & Rocket Stages",
+    locationName: "Hadley-Rille (26.08° N, 3.66° E)",
+    coordinates: "26.08° N, 3.66° E (LM: 26.1322° N, 3.63386° E)",
+    lat: 26.08,
+    lng: 3.66,
+    massKg: 2340,
+    image: "img/apollo15-lrv.jfif",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS15-88-11901.jpg",
+    imageCredit: "NASA / Apollo 15",
+    heritageStatus: "First Lunar Rover & Active Laser Reflector",
+    shortDesc: "Four-wheeled two-seat electric rover built by Boeing (chief designer Ferenc Pavlics), alongside the third active laser reflector, a Bible, and a falcon feather.",
+    story: "The Lunar Roving Vehicle (LRV) was a four-wheeled crewed planetary rover used during Apollo 15, 16, and 17. Developed by general contractor Boeing and designer Ferenc Pavlics, it was a two-seat electric vehicle powered by two non-rechargeable batteries and steered by the mission commander. All three rovers were left on the Moon. Apollo 15 also deployed an active laser retroreflector (26.13333° N, 3.62837° E) and left behind the hammer and falcon feather, the Fallen Astronaut memorial, and a Bible placed on the rover dashboard by James Irwin.",
+    conditionToday: "LRV-1 with the Bible on its dashboard, the Falcon descent stage, and the operational laser reflector stand near Hadley Rille.",
+    inventoryList: [
+      "Lunar Roving Vehicle (LRV) [1] — 26.08° N, 3.66° E",
+      "LM Descent Stage (26.1322° N, 3.63386° E) & LM Ascent Stage (26.36° N, 0.25° E)",
+      "Laser Range Reflector [1] — 26.13333° N, 3.62837° E",
+      "Hammer and Feather & Fallen Astronaut sculpture/plaque",
+      "Bible (left on LRV Dashboard by James Irwin)",
+      "100 2-dollar bills, U.S. Marine Corps flag & 'University of Michigan Alumni of the Moon' document"
+    ],
+    degradation: {
+      day1: "Boeing electric rover on wire-mesh wheels and newly deployed 300-prism laser reflector.",
+      now: "Rover batteries are depleted while the laser retroreflector continues returning pulses to Earth.",
+      future100: "Aluminum and titanium rover chassis and descent stage remain structurally intact."
+    },
+    materials: { aluminum: 1315, titanium: 425, electronics: 120 },
+    source: "NASA History Program Office — Catalogue of Manmade Material on the Moon (pp. 9–12)",
+    url: "https://en.wikipedia.org/wiki/Lunar_Roving_Vehicle"
+  },
+  {
+    id: "apollo16-orion",
+    world: "moon",
+    name: "Apollo 16 Base, UV Camera & LRV-2",
+    mission: "Apollo 16",
+    year: 1972,
+    type: "Crewed landing base",
+    category: "Lunar Module Bases",
+    locationName: "Descartes Highlands (-8.97301° N, 15.50019° E)",
+    coordinates: "8.97301° S, 15.50019° E",
+    lat: -8.97301,
+    lng: 15.50019,
+    massKg: 2350,
+    image: "img/apollo16.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS16-114-18423.jpg",
+    imageCredit: "NASA / Apollo 16",
+    heritageStatus: "Second Lunar Rover & Far-UV Spectrograph",
+    shortDesc: "Apollo 16 Descartes Highlands site: includes the Orion descent stage, second Boeing Lunar Rover, Far Ultraviolet Camera/Spectrograph, and Charles Duke's family portrait.",
+    story: "Apollo 16 landed in the Descartes Highlands at -8.973° N, 15.31° E (descent stage at -8.97301° N, 15.50019° E, Central Station at -8.97537° N, 15.49812° E). Left on the surface were the second Lunar Roving Vehicle (LRV), the gold-plated Far Ultraviolet Camera/Spectrograph operated in the lunar module's shadow, the ALSEP nuclear-powered station, and Charles Duke's family photograph.",
+    conditionToday: "The Orion descent stage, LRV-2, and Far-UV telescope stand in the Descartes Highlands.",
+    inventoryList: [
+      "LM Descent Stage (plaque attached) — -8.97301° N, 15.50019° E",
+      "Central Station (-8.97537° N, 15.49812° E), seismometers, magnetometer & RTG",
+      "Lunar Roving Vehicle [1] — second Boeing electric rover",
+      "Far Ultraviolet Camera/Spectrograph & Cosmic Ray Detector Package [1]",
+      "Charles Duke family photograph",
+      "Silver medallion for 25th anniversary of U.S. Air Force & Tie tack"
+    ],
+    degradation: {
+      day1: "Highland scientific base, Far-UV observatory in the LM shadow, and LRV-2.",
+      now: "Unpowered equipment and UV-bleached family portrait resting on the regolith.",
+      future100: "Preserved metallic structures in the Descartes Highlands."
+    },
+    materials: { aluminum: 1320, titanium: 430, electronics: 120 },
+    source: "NASA History Program Office — Catalogue of Manmade Material on the Moon (pp. 13–17)",
+    url: "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo.html"
+  },
+  {
+    id: "apollo17-challenger",
+    world: "moon",
+    name: "Apollo 17 Base & Lunar Rover LRV-3",
+    mission: "Apollo 17",
+    year: 1972,
+    type: "Crewed landing base",
+    category: "Lunar Module Bases",
+    locationName: "Taurus-Littrow Valley (20.19080° N, 30.77168° E)",
+    coordinates: "20.19080° N, 30.77168° E",
+    lat: 20.1908,
+    lng: 30.77168,
+    massKg: 2360,
+    image: "img/apollo17.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS17-134-20384.jpg",
+    imageCredit: "NASA / Apollo 17",
+    heritageStatus: "Final Apollo Lunar Expedition",
+    shortDesc: "Landing site of the final Apollo expedition (December 1972): houses the third Lunar Roving Vehicle, mass spectrometer, gravimeters, and crew equipment.",
+    story: "The final Apollo mission landed in the Taurus-Littrow valley at 20.10° N, 30.46° E (descent stage at 20.19080° N, 30.77168° E, Central Station at 20.19209° N, 30.76492° E, and ascent stage impact at 19.96° N, 30.50° E). Left behind were the third Boeing Lunar Roving Vehicle, advanced geophysical experiments, and dozens of jettisoned crew items.",
+    conditionToday: "The Challenger descent stage, LRV-3, and ALSEP station rest in the Taurus-Littrow valley.",
+    inventoryList: [
+      "LM Descent Stage (20.19080° N, 30.77168° E), Central Station (20.19209° N, 30.76492° E) & Ascent Stage (19.96° N, 30.50° E)",
+      "Lunar Roving Vehicle [1] — third Boeing electric rover",
+      "Lunar Mass Spectrometer, Lunar Surface Gravimeter, Traverse Gravimeter & Lunar Ejecta and Meteorite Experiment",
+      "Hasselblad Electric Data Cameras [2], 500mm lens, Color TV Camera GCTA, Lunar Drill & Neutron Probe",
+      "LM Personal Hygiene Kit [1], Nail Clippers [1], Soap [1], Mycolog Ointment [1], Wrist Mirrors [2]"
+    ],
+    degradation: {
+      day1: "Completion of the Apollo lunar landing program in December 1972.",
+      now: "Intact hardware of the final crewed lunar expedition of the 20th century.",
+      future100: "Historic monument in the Taurus-Littrow valley."
+    },
+    materials: { aluminum: 1330, titanium: 430, electronics: 120 },
+    source: "NASA History Program Office — Catalogue of Manmade Material on the Moon (pp. 18–21)",
+    url: "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo.html"
+  }
+];
+
+// MARS MISSION RECORDS (Strictly from mars.js)
+const marsArtifacts = [
+  {
+    id: "pathfinder",
+    world: "mars",
+    name: "Mars Pathfinder & Sojourner",
+    mission: "Mars Pathfinder",
+    year: 1997,
+    type: "Lander + micro-rover",
+    category: "Landers & rovers",
+    locationName: "Ares Vallis",
+    coordinates: "19.33° N, 33.55° W",
+    lat: 19.33,
+    lng: -33.55,
+    massKg: null,
+    image: "img/mars-pathfinder.jpg",
+    fallbackImage: "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA04318.jpg",
+    imageCredit: "NASA / JPL",
+    heritageStatus: "Mission complete · 1997",
+    shortDesc: "A low-cost technology demonstration that delivered the first successful Mars rover, Sojourner, to the surface.",
+    story: "Mars Pathfinder landed in Ares Vallis on 4 July 1997. Its lander carried Sojourner, a small six-wheeled rover that examined nearby rocks and soil. The mission tested an airbag-assisted landing system and a practical way to operate a rover from a stationary lander. NASA reports that the mission returned more than 16,500 lander images and 550 rover images before its final data transmission in September 1997.",
+    conditionToday: "The lander and rover stopped communicating after the 1997 mission. The point on this map marks the published landing region; it is not a modern condition survey of each component.",
+    inventoryList: [
+      "Airbag-assisted landing system",
+      "Sojourner: first rover to operate on Mars",
+      "More than 16,500 lander images and 550 rover images",
+      "Mission data transmission ended 27 September 1997"
+    ],
+    materials: null,
+    source: "NASA Science — Mars Pathfinder",
+    url: "https://science.nasa.gov/mission/mars-pathfinder/"
+  },
+  {
+    id: "viking-1",
+    world: "mars",
+    name: "Viking 1",
+    mission: "Viking 1",
+    year: 1976,
+    type: "Orbiter + lander",
+    category: "Landers & rovers",
+    locationName: "Chryse Planitia",
+    coordinates: "22.48° N, 47.97° W",
+    lat: 22.48,
+    lng: -47.97,
+    massKg: null,
+    image: "img/mars-viking1.jpg",
+    fallbackImage: "https://d2pn8kiwq2w21t.cloudfront.net/original_images/imagesviking20100820pia00381-full.jpg",
+    imageCredit: "NASA / JPL",
+    heritageStatus: "Inactive · historic landing site",
+    shortDesc: "The first U.S. mission to land successfully on Mars and return images from the surface.",
+    story: "Viking 1 launched on 20 August 1975 and landed in Chryse Planitia on 20 July 1976. Its orbiter studied Mars from space while the lander photographed the surface and carried experiments to investigate the soil and environment. The mission opened a new chapter in robotic exploration by returning the first images from a successful U.S. Mars landing.",
+    conditionToday: "Viking 1 is an inactive historic lander. The marker represents the landing site in Chryse Planitia, not the full orbital path or the exact position of every discarded component.",
+    inventoryList: [
+      "Launched 20 August 1975",
+      "Landed 20 July 1976",
+      "First successful U.S. Mars landing",
+      "Returned the first surface images from the mission"
+    ],
+    materials: null,
+    source: "NASA Science — Viking 1",
+    url: "https://science.nasa.gov/mission/viking-1/"
+  },
+  {
+    id: "spirit",
+    world: "mars",
+    name: "Spirit",
+    mission: "Mars Exploration Rover",
+    year: 2004,
+    type: "Solar-powered rover",
+    category: "Landers & rovers",
+    locationName: "Gusev Crater",
+    coordinates: "14.57° S, 175.47° E",
+    lat: -14.57,
+    lng: 175.47,
+    massKg: null,
+    image: "img/mars-spirit.jpg",
+    fallbackImage: "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/internal_resources/3447/solar_panels_on_rover_seen_from_above.jpeg?fit=clip&h=601&w=768",
+    imageCredit: "NASA / JPL-Caltech",
+    heritageStatus: "Inactive · mission concluded 2010",
+    shortDesc: "One of two twin rovers sent to search for signs that water once altered the Martian environment.",
+    story: "Spirit landed in Gusev Crater on 3 January 2004. Together with its twin Opportunity, it investigated rocks and soils for evidence of past water. Spirit worked for years beyond its planned primary mission; NASA concluded the mission in 2010 after contact could not be restored.",
+    conditionToday: "Spirit is no longer operating. The map marker identifies its landing region in Gusev Crater; the rover travelled away from the landing point during its mission.",
+    inventoryList: [
+      "Landing: 3 January 2004",
+      "Twin rover: Opportunity",
+      "Investigated evidence of past water",
+      "Mission concluded in 2010"
+    ],
+    materials: null,
+    source: "NASA Science — Spirit & Opportunity",
+    url: "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+  },
+  {
+    id: "opportunity",
+    world: "mars",
+    name: "Opportunity",
+    mission: "Mars Exploration Rover",
+    year: 2004,
+    type: "Solar-powered rover",
+    category: "Landers & rovers",
+    locationName: "Meridiani Planum",
+    coordinates: "1.95° S, 5.53° W",
+    lat: -1.95,
+    lng: -5.53,
+    massKg: null,
+    image: "img/mars-opportunity.jpg",
+    fallbackImage: "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/internal_resources/3447/solar_panels_on_rover_seen_from_above.jpeg?fit=clip&h=601&w=768",
+    imageCredit: "NASA / JPL-Caltech",
+    heritageStatus: "Inactive · last communication 2018",
+    shortDesc: "Opportunity far outlasted its planned mission and found strong evidence that ancient water once flowed on Mars.",
+    story: "Opportunity landed on Meridiani Planum on 24 January 2004. It was designed as Spirit’s twin, with the pair looking for geological evidence of past water. Opportunity continued exploring for nearly 15 years. Its final communication was received on 10 June 2018 after a planet-wide dust storm.",
+    conditionToday: "Opportunity is inactive. Its landing marker is shown for geographic context; the rover travelled a long distance from that point during its mission.",
+    inventoryList: [
+      "Landing: 24 January 2004",
+      "Confirmed evidence of ancient water",
+      "Worked for nearly 15 years",
+      "Last communication: 10 June 2018"
+    ],
+    materials: null,
+    source: "NASA Science — Spirit & Opportunity",
+    url: "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+  },
+  {
+    id: "insight",
+    world: "mars",
+    name: "InSight",
+    mission: "Interior Exploration using Seismic Investigations, Geodesy and Heat Transport",
+    year: 2018,
+    type: "Stationary lander",
+    category: "Landers & rovers",
+    locationName: "Elysium Planitia",
+    coordinates: "4.5° N, 135.9° E",
+    lat: 4.5,
+    lng: 135.9,
+    massKg: null,
+    image: "img/mars-insight.webp",
+    fallbackImage: "https://photojournal.jpl.nasa.gov/jpeg/PIA25287.jpg",
+    imageCredit: "NASA / JPL-Caltech",
+    heritageStatus: "Inactive · mission ended 2022",
+    shortDesc: "A stationary geophysical lander that listened for marsquakes and measured heat flow to study the planet’s interior.",
+    story: "InSight launched on 5 May 2018 and landed in Elysium Planitia on 26 November 2018. Unlike a rover, it stayed in one place and studied Mars from the surface. Its seismometer recorded marsquakes, while a heat-flow probe was designed to investigate heat moving from the planet’s interior. NASA ended the mission on 15 December 2022 after dust accumulation reduced the lander’s power.",
+    conditionToday: "The mission has ended and the lander is no longer communicating. Its location is a fixed landing site, rather than a rover traverse.",
+    inventoryList: [
+      "Landing: 26 November 2018",
+      "Seismometer measured marsquakes",
+      "Heat-flow experiment studied the interior",
+      "Mission ended 15 December 2022"
+    ],
+    materials: null,
+    source: "NASA Science — InSight",
+    url: "https://science.nasa.gov/mission/insight/"
+  },
+  {
+    id: "ingenuity",
+    world: "mars",
+    name: "Ingenuity Mars Helicopter",
+    mission: "Mars 2020 / Perseverance",
+    year: 2021,
+    type: "Robotic helicopter",
+    category: "Aircraft & technology",
+    locationName: "Jezero Crater",
+    coordinates: "Approx. 18° N, 77° E",
+    lat: 18,
+    lng: 77,
+    massKg: null,
+    image: "img/mars-ingenuity.jpg",
+    fallbackImage: "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia24/pia24550/PIA24550.jpg",
+    imageCredit: "NASA / JPL-Caltech",
+    heritageStatus: "Flight campaign complete · 2024",
+    shortDesc: "A technology demonstrator that became the first aircraft to perform powered, controlled flights on another planet.",
+    story: "Ingenuity travelled to Mars attached to the Perseverance rover and operated in Jezero Crater. Its first flight took place on 19 April 2021. The helicopter was designed for a short technology demonstration, but completed 72 flights and supported surface exploration by scouting terrain from the air. Its final flight took place on 18 January 2024.",
+    conditionToday: "The flight campaign is complete. The marker represents the Jezero deployment area, not a claim that the helicopter is still active or at the exact marker coordinate.",
+    inventoryList: [
+      "First powered, controlled flight on another planet: 19 April 2021",
+      "72 flights completed",
+      "Supported Perseverance with aerial scouting",
+      "Final flight: 18 January 2024"
+    ],
+    materials: null,
+    source: "NASA Science — Ingenuity",
+    url: "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/"
+  }
+];
+
+// BEYOND MARS MISSIONS (Strictly shown only on the Mars view)
+const beyondMarsData = [
+  {
+    id: "dawn",
+    name: "Dawn",
+    year: 2007,
+    destination: "Vesta & Ceres",
+    summary: "An ion-propelled spacecraft that orbited two large bodies in the asteroid belt.",
+    note: "Not a Mars mission or a Mars surface artifact.",
+    url: "https://science.nasa.gov/mission/dawn/"
+  },
+  {
+    id: "near",
+    name: "NEAR Shoemaker",
+    year: 1996,
+    destination: "Asteroid Eros",
+    summary: "The first spacecraft to orbit and then make a controlled touchdown on an asteroid.",
+    note: "Its destination was Eros, not Mars.",
+    url: "https://science.nasa.gov/mission/near-shoemaker/"
+  },
+  {
+    id: "pioneer",
+    name: "Pioneer 10",
+    year: 1972,
+    destination: "Jupiter & outer Solar System",
+    summary: "The first spacecraft to pass through the asteroid belt and make a close flyby of Jupiter.",
+    note: "It travelled beyond Mars but did not land there.",
+    url: "https://science.nasa.gov/mission/pioneer-10/"
+  },
+  {
+    id: "kepler",
+    name: "Kepler Space Telescope",
+    year: 2009,
+    destination: "Heliocentric orbit",
+    summary: "A space telescope that searched for planets orbiting other stars.",
+    note: "It operated in solar orbit and is not a Mars artifact.",
+    url: "https://science.nasa.gov/mission/kepler/"
+  }
+];
+
+// ADDITIONAL LUNAR CATALOGUE SITES (Pages 1 & 22 of NASA PDF Catalogue)
+const extraCatalogPoints = [
+  { name: "Ranger 6 (USA)", coords: "9.388° N, 21.480° E", lat: 9.388, lng: 21.480, group: "U.S. Non-Apollo (PDF p. 1)" },
+  { name: "Ranger 7 (USA)", coords: "-10.63° N, -20.60° E", lat: -10.63, lng: -20.60, group: "U.S. Non-Apollo (PDF p. 1)" },
+  { name: "Ranger 8 (USA)", coords: "2.638° N, 24.787° E", lat: 2.638, lng: 24.787, group: "U.S. Non-Apollo (PDF p. 1)" },
+  { name: "Surveyor 1 (USA)", coords: "-2.474° N, -43.339° E", lat: -2.474, lng: -43.339, group: "U.S. Non-Apollo (PDF p. 1)" },
+  { name: "Surveyor 5 (USA)", coords: "1.461° N, 23.195° E", lat: 1.461, lng: 23.195, group: "U.S. Non-Apollo (PDF p. 1)" },
+  { name: "Surveyor 6 (USA)", coords: "0.473° N, -1.427° E", lat: 0.473, lng: -1.427, group: "U.S. Non-Apollo (PDF p. 1)" },
+  { name: "Luna 2 (USSR)", coords: "29.1° N, 0° E", lat: 29.1, lng: 0, group: "Soviet Material (PDF p. 22)" },
+  { name: "Luna 9 (USSR)", coords: "7.08° N, -64.37° E", lat: 7.08, lng: -64.37, group: "Soviet Material (PDF p. 22)" },
+  { name: "Luna 16 (USSR)", coords: "-0.513° N, 56.364° E", lat: -0.513, lng: 56.364, group: "Soviet Material (PDF p. 22)" },
+  { name: "Lunokhod 1 & Luna 17 (USSR)", coords: "38.316° N, -35.004° E", lat: 38.316, lng: -35.004, group: "Soviet Material (PDF p. 22)" },
+  { name: "Lunokhod 2 & Luna 21 (USSR)", coords: "25.827° N, 30.919° E", lat: 25.827, lng: 30.919, group: "Soviet Material (PDF p. 22)" },
+  { name: "Luna 24 (USSR)", coords: "12.714° N, 62.213° E", lat: 12.714, lng: 62.213, group: "Soviet Material (PDF p. 22)" },
+  { name: "Chang'e 1 Orbiter (China)", coords: "-1.50° N, 52.36° E", lat: -1.50, lng: 52.36, group: "Chinese Material (PDF p. 22)" },
+  { name: "Hiten Spacecraft (Japan)", coords: "55.3° N, -34.0° E", lat: 55.3, lng: -34.0, group: "Japanese Material (PDF p. 22)" },
+  { name: "SMART-1 (ESA)", coords: "-34.4° N, -46.2° E", lat: -34.4, lng: -46.2, group: "ESA Material (PDF p. 22)" }
+];
+
+// UNUSUAL & PERSONAL ARTIFACTS LEFT ON THE MOON
+const personalArtifactsData = [
+  {
+    mission: "Apollo 11 (1969)",
+    title: "Gagarin & Komarov Medals, Gold Olive Branch & Reflector",
+    category: "Symbols of Peace",
+    image: "img/item-apollo11-medals.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS11-40-5952.jpg",
+    desc: "Catalogue p. 2: A miniature Gold Olive Branch [1], an Apollo 1 mission patch honoring Grissom, White, and Chaffee, two Soviet medals honoring Yuri Gagarin and Vladimir Komarov, and the laser retroreflector."
+  },
+  {
+    mission: "Apollo 12 (1969)",
+    title: "Surveyor 3 Sample Cutter, Hammock & Astronaut Wings",
+    category: "Tools & Tributes",
+    image: "img/item-apollo12-cutter.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS12-48-7090.jpg",
+    desc: "Catalogue pp. 4–5: The specialized cutter used to snip parts from Surveyor 3, two Hasselblad cameras, red and blue utility towels, a sleeping hammock, and Astronaut Wings (C.C. Williams [1], Alan Bean [1])."
+  },
+  {
+    mission: "Apollo 14 (1971)",
+    title: "Two Golf Balls, Javelin & Two-Wheeled MET Cart",
+    category: "Lunar Sports & Gear",
+    image: "img/item-apollo14-golf.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS14-67-9367.jpg",
+    desc: "Catalogue p. 8: Two golf balls driven by Alan Shepard with a makeshift 6-iron club, a shaft thrown as a javelin by Edgar Mitchell, and the two-wheeled Modular Equipment Transporter."
+  },
+  {
+    mission: "Apollo 15 (1971)",
+    title: "Hammer & Falcon Feather, Fallen Astronaut, Bible & $2 Bills",
+    category: "Science & Relics",
+    image: "img/item-apollo15-feather.jpg",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS15-88-11894.jpg",
+    desc: "Catalogue pp. 9, 12: The hammer and falcon feather dropped in vacuum, the Fallen Astronaut memorial sculpture, a Bible left on the LRV dashboard, 100 $2 bills, and a University of Michigan diploma."
+  },
+  {
+    mission: "Apollo 16 (1972)",
+    title: "Charles Duke's Family Photograph & Air Force Medallion",
+    category: "Personal Keepsakes",
+    image: "img/item-apollo16-photo.jfif",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS16-117-18841.jpg",
+    desc: "Catalogue p. 17: A plastic-wrapped photograph of Astronaut Charles Duke's family placed directly on the lunar dust, alongside a silver medallion for the 25th anniversary of the U.S. Air Force."
+  },
+  {
+    mission: "Apollo 11 — 17",
+    title: "PLSS Life Support Packs, Lunar Overshoes & Jettison Bags",
+    category: "Weight Trade-off",
+    image: "img/item-apollo-plss.webp",
+    fallbackImage: "https://commons.wikimedia.org/wiki/Special:FilePath/AS11-40-5903.jpg",
+    desc: "Every extra kilogram required fuel during liftoff. Crews jettisoned heavy PLSS backpacks, lunar boots, cameras, nail clippers, soap, and waste containers so they could bring back more lunar rock."
+  }
+];
+
+// ALL SOURCES TAGGED BY WORLD ("moon" vs "mars") SO EACH PAGE SHOWS ONLY ITS OWN SOURCES
+const projectSourcesData = [
+  { world: "moon", group: "Lunar Archive", title: "Catalogue of Manmade Material on the Moon (NASA History Program Office, 22-page PDF)", url: "https://history.nasa.gov/" },
+  { world: "moon", group: "Lunar Archive", title: "NASA NSSDC — The Apollo Program", url: "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo.html" },
+  { world: "moon", group: "Lunar Archive", title: "NASA NSSDC — Lunar Exploration Timeline", url: "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunartimeline.html" },
+  { world: "moon", group: "Lunar Archive", title: "NASA NSSDC — Moon Fact Sheet", url: "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html" },
+  { world: "moon", group: "Lunar Archive", title: "LROC — Lunar Reconnaissance Orbiter Camera Featured Sites", url: "https://lroc.im-ldi.com/featured_sites" },
+  { world: "moon", group: "Lunar Archive", title: "Apollo Lunar Surface Journal", url: "https://apollojournals.org/" },
+  { world: "moon", group: "Lunar Archive", title: "NASA Science — Surveyor 3 Mission", url: "https://science.nasa.gov/mission/surveyor-3/" },
+  { world: "moon", group: "Lunar Archive", title: "NASA — Lunar Orbiter 4 Mission", url: "https://www.nasa.gov/mission/lunar-orbiter-4/" },
+  { world: "moon", group: "Lunar Archive", title: "NASA NSSDC — Apollo 12 Lunar Module Intrepid (1969-099C)", url: "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C" },
+  { world: "moon", group: "Lunar Archive", title: "Royal Museums Greenwich — Strange Things Humans Have Left on the Moon", url: "https://www.rmg.co.uk/stories/space-astronomy/strange-things-humans-have-left-on-moon" },
+  { world: "moon", group: "Lunar Archive", title: "BBC Future — Leave Only Moonprints: NASA's Lunar Recycling Ambitions", url: "https://www.bbc.com/future/article/20241206-leave-only-moonprints-nasas-lunar-recycling-ambitions" },
+  { world: "moon", group: "Lunar Cartography", title: "NASA / GSFC / Arizona State University — LROC Lunar Basemap", url: "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg" },
+
+  { world: "mars", group: "Mars Surface Missions", title: "NASA Science — Viking 1", url: "https://science.nasa.gov/mission/viking-1/" },
+  { world: "mars", group: "Mars Surface Missions", title: "NASA Science — Mars Pathfinder & Sojourner", url: "https://science.nasa.gov/mission/mars-pathfinder/" },
+  { world: "mars", group: "Mars Surface Missions", title: "NASA Science — Mars Exploration Rovers: Spirit & Opportunity", url: "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/" },
+  { world: "mars", group: "Mars Surface Missions", title: "NASA Science — InSight Mars Lander", url: "https://science.nasa.gov/mission/insight/" },
+  { world: "mars", group: "Mars Surface Missions", title: "NASA Science — Ingenuity Mars Helicopter (Mars 2020 / Perseverance)", url: "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/" },
+  { world: "mars", group: "Beyond Mars Context", title: "NASA Science — Dawn (Vesta & Ceres)", url: "https://science.nasa.gov/mission/dawn/" },
+  { world: "mars", group: "Beyond Mars Context", title: "NASA Science — NEAR Shoemaker (Asteroid Eros)", url: "https://science.nasa.gov/mission/near-shoemaker/" },
+  { world: "mars", group: "Beyond Mars Context", title: "NASA Science — Pioneer 10 (Jupiter & Outer Solar System)", url: "https://science.nasa.gov/mission/pioneer-10/" },
+  { world: "mars", group: "Beyond Mars Context", title: "NASA Science — Kepler Space Telescope", url: "https://science.nasa.gov/mission/kepler/" },
+  { world: "mars", group: "Mars Cartography", title: "NASA / MOLA Science Team — Mars Global Topography Basemap", url: "https://marsoweb.nas.nasa.gov/globalData/images/fullscale/MOLA_cylin.jpg" }
+];
