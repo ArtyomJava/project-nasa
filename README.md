@@ -53,41 +53,7 @@ Designed in a strict, high-contrast **NASA technical aesthetic** (sharp-edged ge
 
 ---
 
-## Project Structure
 
-```text
-📁 space-heritage-archive/
- ├── 📄 index.html                  # Main application layout, NASA styling & UI sections
- ├── 📄 app.js                      # 2D/3D map engine, world switcher, modal & simulator logic
- ├── 📄 data.js                     # Complete Moon, Mars, Personal Items & Sources database
- ├── 📄 README.md                   # Project documentation & archival references
- └── 📁 img/                        # Local media assets (with automatic NASA CDN fallback)
-      ├── 🖼️ moon-texture.jpg       # Equirectangular lunar texture for Hero & 3D Globe
-      ├── 🖼️ mars-texture.jpg       # Equirectangular Mars texture for Hero & 3D Globe
-      ├── 🖼️ earth-texture.jpg      # Earth texture for the Laser Signal Lab
-      ├── 🖼️ surveyor3.jpg          # Surveyor 3 Lander
-      ├── 🖼️ lunar-orbiter4.jpg     # Lunar Orbiter 4
-      ├── 🖼️ surveyor7.jpg          # Surveyor 7 Lander
-      ├── 🖼️ apollo11.jpg           # Apollo 11 Eagle Descent Stage
-      ├── 🖼️ apollo12.jpg           # Apollo 12 Intrepid Descent Stage
-      ├── 🖼️ saturn-sivb.jpg        # Saturn V S-IVB Third Stage
-      ├── 🖼️ apollo14.jpg           # Apollo 14 Antares & MET
-      ├── 🖼️ apollo15-lrv.jpg       # Apollo 15 Lunar Roving Vehicle (LRV-1)
-      ├── 🖼️ apollo16.jpg           # Apollo 16 Orion & Far-UV Camera
-      ├── 🖼️ apollo17.jpg           # Apollo 17 Challenger & LRV-3
-      ├── 🖼️ mars-pathfinder.jpg    # Mars Pathfinder & Sojourner
-      ├── 🖼️ mars-viking1.jpg       # Viking 1 Lander
-      ├── 🖼️ mars-spirit.jpg        # Spirit Rover (MER-A)
-      ├── 🖼️ mars-opportunity.jpg   # Opportunity Rover (MER-B)
-      ├── 🖼️ mars-insight.jpg       # InSight Mars Lander
-      ├── 🖼️ mars-ingenuity.jpg     # Ingenuity Mars Helicopter
-      ├── 🖼️ item-apollo11-medals.jpg
-      ├── 🖼️ item-apollo12-cutter.jpg
-      ├── 🖼️ item-apollo14-golf.jpg
-      ├── 🖼️ item-apollo15-feather.jpg
-      ├── 🖼️ item-apollo16-photo.jpg
-      └── 🖼️ item-apollo-plss.jpg
-```
 
 > **Automatic Fallback System:** The application first attempts to load images from the local `img/` directory. If a local image is not present, `handleImageError()` automatically falls back to official high-resolution NASA / Wikimedia Commons archival URLs so the interface never displays broken images.
 
